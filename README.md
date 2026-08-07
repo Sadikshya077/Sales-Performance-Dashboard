@@ -22,30 +22,24 @@ The objective of this project is to analyze retail sales data and answer real bu
 # 🛠️ Tech Stack
 
 ### Programming
-
 - Python
 
 ### Python Libraries
-
 - Pandas
 - NumPy
 - Matplotlib
 - OpenPyXL
 
 ### Database
-
 - SQLite
 
 ### Query Language
-
 - SQL
 
 ### Data Visualization
-
-- Power BI *(In Progress)*
+- Power BI
 
 ### Version Control
-
 - Git
 - GitHub
 
@@ -72,8 +66,10 @@ sales-performance-dashboard/
 │   └── queries.sql
 │
 ├── dashboard/
+│   └── Sales_Performance_Dashboard.pbix
 │
 ├── screenshots/
+│   └── day3_dashboard.png
 │
 ├── business_insights.md
 ├── README.md
@@ -87,8 +83,8 @@ sales-performance-dashboard/
 
 **Dataset:** Superstore Sales Dataset
 
-- Total Records: **9,994**
-- Total Columns: **21**
+- **Total Records:** 9,994
+- **Total Columns:** 21
 
 ### Main Features
 
@@ -122,12 +118,13 @@ sales-performance-dashboard/
 - Checked duplicate records
 - Converted date columns to datetime
 - Created Year and Month columns
+- Created additional calculated fields
 - Saved cleaned dataset
 
 ### Skills Learned
 
 - Reading CSV files using Pandas
-- DataFrames
+- Working with DataFrames
 - Data Cleaning
 - Exploratory Data Analysis
 - DateTime conversion
@@ -143,44 +140,84 @@ sales-performance-dashboard/
 - Created SQLite database
 - Imported cleaned dataset into SQLite
 - Connected Python with SQLite
-- Wrote 25+ SQL queries
+- Wrote **25+ SQL queries**
 - Calculated business KPIs
-- Performed sales analysis by:
+- Performed sales and profit analysis by:
   - Category
+  - Sub-Category
   - Region
   - Customer
   - Product
-- Generated business insights
+- Used filtering and aggregation to answer business questions
 
 ### SQL Concepts Practiced
 
-- SELECT
-- WHERE
-- GROUP BY
-- ORDER BY
-- LIMIT
-- HAVING
-- Aggregate Functions
-  - COUNT()
-  - SUM()
-  - AVG()
-  - MAX()
-  - MIN()
-- ROUND()
-- NULLIF()
-- AND / OR / IN
+- `SELECT`
+- `WHERE`
+- `GROUP BY`
+- `ORDER BY`
+- `LIMIT`
+- `HAVING`
+- Aggregate Functions:
+  - `COUNT()`
+  - `SUM()`
+  - `AVG()`
+  - `MAX()`
+  - `MIN()`
+- `ROUND()`
+- `NULLIF()`
+- `AND`
+- `OR`
+- `IN`
 
 ---
 
-# 📊 Key Business Questions Answered
+## ✅ Day 3 – Power BI Dashboard
 
-Some of the business questions explored in this project include:
+### Completed
+
+- Installed and configured Power BI Desktop
+- Loaded the cleaned Superstore dataset into Power BI
+- Created DAX measures for business KPIs
+- Created KPI cards for:
+  - Total Sales
+  - Total Profit
+  - Total Orders
+  - Average Sales
+  - Profit Margin %
+- Created **Sales Trend Over Time** visualization
+- Created **Sales by Category** visualization
+- Created **Profit by Region** visualization
+- Created **Sales by Customer Segment** visualization
+- Started **Top Customers by Sales** analysis
+- Practiced dashboard layout and visual formatting
+
+### Power BI Concepts Learned
+
+- Importing data into Power BI
+- DAX measures
+- KPI cards
+- Line charts
+- Column charts
+- Bar charts
+- Donut charts
+- Top N filtering
+- Basic dashboard design
+- Visual formatting
+
+---
+
+# 📌 Business Questions
+
+The project explores questions such as:
 
 - How many total orders were placed?
 - What is the total sales revenue?
 - What is the total profit?
+- How are sales changing over time?
 - Which category generates the highest sales?
-- Which region is the most profitable?
+- Which region generates the highest profit?
+- Which customer segment generates the most sales?
 - Who are the top customers by sales?
 - Which products generate the highest revenue?
 - Which orders resulted in losses?
@@ -188,82 +225,179 @@ Some of the business questions explored in this project include:
 
 ---
 
-# 📌 Business KPIs
+# 📊 Business KPIs
 
-The following KPIs were calculated using SQL:
+The dashboard currently includes:
 
-- Total Orders
-- Total Sales
-- Total Profit
-- Average Sales
-- Highest Sale
-- Lowest Sale
+| KPI | Description |
+|---|---|
+| Total Sales | Total revenue generated |
+| Total Profit | Total profit generated |
+| Total Orders | Number of orders/records |
+| Average Sales | Average sales value |
+| Profit Margin % | Profit as a percentage of sales |
+
+Additional analysis includes:
+
 - Sales by Category
 - Profit by Region
-- Top Customers
-- Top Products
+- Sales by Customer Segment
+- Sales Trend Over Time
+- Top Customers by Sales
 
 ---
 
-# 🔜 Upcoming Work
+# 📈 Dashboard Visualizations
 
-## Day 3
+The Power BI dashboard currently contains:
 
-- Connect dataset to Power BI
-- Create KPI cards
-- Build interactive charts
-- Add slicers and filters
-- Design professional dashboard layout
+### KPI Cards
 
-## Day 4
+- Total Sales
+- Total Profit
+- Total Orders
+- Average Sales
+- Profit Margin %
 
-- Dashboard refinement
-- Final business insights
-- README improvements
-- GitHub project polishing
+### Charts
+
+- Sales Trend Over Time
+- Sales by Category
+- Profit by Region
+- Sales by Customer Segment
+- Top Customers by Sales
+
+### Upcoming Interactive Features
+
+- Year slicer
+- Region slicer
+- Category slicer
+- Interactive filtering
 
 ---
 
 # 💼 Skills Demonstrated
 
+### Data Analysis
+
 - Data Cleaning
 - Exploratory Data Analysis
 - Feature Engineering
-- SQL Query Writing
-- Database Management
 - Business KPI Analysis
+- Data Visualization
 - Data Storytelling
-- Git & GitHub
+
+### Python
+
+- Pandas
+- NumPy
+- Matplotlib
+- SQLite integration
+
+### SQL
+
+- Data aggregation
+- Filtering
+- Grouping
+- Sorting
+- Business analysis queries
+
+### Power BI
+
+- DAX Measures
+- KPI Cards
+- Interactive Visualizations
+- Dashboard Design
+- Top N Analysis
+
+### Other Tools
+
+- Git
+- GitHub
+- Jupyter Notebook
+- SQLite
+
+---
+
+# 🔜 Upcoming Work
+
+## Day 4 – Finalization
+
+- Complete Top 10 Customers visualization
+- Add interactive slicers
+- Improve dashboard layout
+- Apply final formatting
+- Validate dashboard calculations
+- Generate final business insights
+- Add dashboard screenshots
+- Improve README documentation
+- Clean and organize GitHub repository
+- Prepare the project for portfolio/interview presentation
 
 ---
 
 # 📷 Dashboard Preview
 
-*(Will be added after completing the Power BI dashboard.)*
+### Current Dashboard – Day 3
+
+![Sales Performance Dashboard](screenshots/day3_dashboard.png)
+
+> The dashboard will be further refined with interactive slicers, improved formatting, and additional analysis on Day 4.
 
 ---
 
 # ▶️ How to Run
 
-1. Clone the repository
+## 1. Clone the repository
 
 ```bash
 git clone <repository-url>
 ```
 
-2. Install dependencies
+## 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the scripts in order
+## 3. Run the data cleaning script
 
 ```bash
 python scripts/01_data_cleaning.py
+```
+
+## 4. Create the SQLite database
+
+```bash
 python scripts/02_create_database.py
+```
+
+## 5. Run SQL analysis
+
+```bash
 python scripts/03_sql_analysis.py
 ```
+
+## 6. Open the Power BI dashboard
+
+Open:
+
+```text
+dashboard/Sales_Performance_Dashboard.pbix
+```
+
+using **Power BI Desktop**.
+
+---
+
+# 🗓️ Project Timeline
+
+| Day | Focus | Status |
+|---|---|---|
+| Day 1 | Data Cleaning & Preparation | ✅ Completed |
+| Day 2 | SQL Analysis & Business Questions | ✅ Completed |
+| Day 3 | Power BI Dashboard Development | ✅ Completed |
+| Day 4 | Dashboard Finalization & Insights | 🔜 Upcoming |
 
 ---
 
