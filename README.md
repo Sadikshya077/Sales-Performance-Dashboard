@@ -1,51 +1,61 @@
 # 📊 Sales Performance Dashboard
 
-An end-to-end **Data Analysis** project that demonstrates the complete analytics workflow—from raw sales data to business insights and interactive dashboards using **Python, SQL, SQLite, and Power BI**.
+An end-to-end **Data Analytics project** analyzing 9,994 Superstore sales records to identify trends in sales, profitability, customer performance, regional performance, and product categories.
 
-This project is being built while learning industry-standard data analysis tools and best practices commonly used by Data Analysts.
-
----
-
-# 🚀 Project Objective
-
-The objective of this project is to analyze retail sales data and answer real business questions through:
-
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- SQL Analysis
-- Business KPI Calculation
-- Interactive Dashboard Development
-- Business Insight Generation
+The project demonstrates a complete analytics workflow using **Python, SQL, SQLite, and Power BI**, transforming raw sales data into actionable business insights through data cleaning, analysis, KPI development, and interactive visualization.
 
 ---
 
-# 🛠️ Tech Stack
+## 🎯 Business Problem
 
-### Programming
-- Python
+Retail businesses generate large amounts of sales data, but raw data alone does not provide clear answers to important business questions.
 
-### Python Libraries
-- Pandas
-- NumPy
-- Matplotlib
-- OpenPyXL
+This project analyzes Superstore sales data to answer questions such as:
 
-### Database
-- SQLite
+- How much revenue and profit is the business generating?
+- How are orders changing over time?
+- Which categories generate the most sales and profit?
+- Which regions are the most profitable?
+- Which customer segments contribute the most revenue?
+- Who are the highest-value customers?
+- Which areas may require further investigation?
 
-### Query Language
-- SQL
-
-### Data Visualization
-- Power BI
-
-### Version Control
-- Git
-- GitHub
+The final output is an interactive Power BI dashboard designed to provide a quick overview of business performance and support data-driven decision-making.
 
 ---
 
-# 📂 Project Structure
+## 📌 Project Highlights
+
+- Analyzed **9,994 sales records**
+- Cleaned and transformed raw data using **Python and Pandas**
+- Built a **SQLite database** for structured analysis
+- Wrote **25+ SQL queries** to answer business questions
+- Created business KPI measures using **DAX**
+- Built an interactive **Power BI dashboard**
+- Added dynamic filtering using **Year, Region, and Category slicers**
+- Performed **Top 10 customer analysis**
+- Generated actionable business insights from the analysis
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| **Python** | Data cleaning and preprocessing |
+| **Pandas** | Data manipulation and analysis |
+| **NumPy** | Numerical operations |
+| **Matplotlib** | Exploratory visualization |
+| **SQLite** | Relational data storage |
+| **SQL** | Business analysis and aggregation |
+| **Power BI** | Interactive dashboard and visualization |
+| **DAX** | KPI and calculated measures |
+| **Git & GitHub** | Version control and project management |
+| **Jupyter Notebook** | Exploratory data analysis |
+
+---
+
+## 📂 Project Structure
 
 ```text
 sales-performance-dashboard/
@@ -75,82 +85,85 @@ sales-performance-dashboard/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-```
 
----
-
-# 📈 Dataset Information
+# 📈 Dataset
 
 **Dataset:** Superstore Sales Dataset
 
-- **Total Records:** 9,994
-- **Total Columns:** 21
+The dataset contains **9,994 records and 21 columns** covering customer orders, products, shipping, sales, discounts, and profitability.
 
-### Main Features
+### Key Fields
 
-- Orders
-- Customers
-- Products
-- Category
-- Sub-Category
-- Region
-- Sales
-- Profit
-- Discount
-- Quantity
+- Order ID
 - Order Date
 - Ship Date
+- Customer Name
+- Segment
+- Region
+- State
+- Category
+- Sub-Category
+- Product Name
+- Sales
+- Quantity
+- Discount
+- Profit
 
 ---
 
-# 📅 Project Progress
+# 🔄 Analytics Workflow
 
-## ✅ Day 1 – Data Cleaning & Preparation
+```text
+Raw Dataset
+     │
+     ▼
+Data Cleaning & Preparation
+     │
+     ▼
+Exploratory Data Analysis
+     │
+     ▼
+SQLite Database
+     │
+     ▼
+SQL Business Analysis
+     │
+     ▼
+KPI & Metric Development
+     │
+     ▼
+Power BI Dashboard
+     │
+     ▼
+Business Insights
 
-### Completed
+# 🧹 Data Preparation
 
-- Project setup
-- Installed required libraries
-- Loaded Superstore dataset
-- Performed Exploratory Data Analysis (EDA)
-- Checked data types
-- Checked missing values
-- Checked duplicate records
-- Converted date columns to datetime
-- Created Year and Month columns
-- Created additional calculated fields
-- Saved cleaned dataset
+Python and Pandas were used to prepare the dataset for analysis.
 
-### Skills Learned
+### Data preparation included:
 
-- Reading CSV files using Pandas
-- Working with DataFrames
-- Data Cleaning
-- Exploratory Data Analysis
-- DateTime conversion
-- Feature Engineering
-- Exporting cleaned datasets
+- Loading the raw dataset
+- Inspecting data types
+- Checking missing values
+- Checking duplicate records
+- Converting date fields to datetime
+- Creating Year and Month fields
+- Creating additional calculated fields
+- Validating the cleaned dataset
+- Exporting the cleaned dataset
+
+The cleaned data was then used for SQL and Power BI analysis.
 
 ---
 
-## ✅ Day 2 – SQL Analysis & Business Insights
+# 🗄️ SQL Analysis
 
-### Completed
+The cleaned dataset was imported into a SQLite database and analyzed using SQL.
 
-- Created SQLite database
-- Imported cleaned dataset into SQLite
-- Connected Python with SQLite
-- Wrote **25+ SQL queries**
-- Calculated business KPIs
-- Performed sales and profit analysis by:
-  - Category
-  - Sub-Category
-  - Region
-  - Customer
-  - Product
-- Used filtering and aggregation to answer business questions
+More than **25 SQL queries** were written to investigate sales and profitability.
 
-### SQL Concepts Practiced
+### SQL concepts used:
 
 - `SELECT`
 - `WHERE`
@@ -158,246 +171,217 @@ sales-performance-dashboard/
 - `ORDER BY`
 - `LIMIT`
 - `HAVING`
-- Aggregate Functions:
-  - `COUNT()`
-  - `SUM()`
-  - `AVG()`
-  - `MAX()`
-  - `MIN()`
+- `COUNT()`
+- `SUM()`
+- `AVG()`
+- `MAX()`
+- `MIN()`
 - `ROUND()`
 - `NULLIF()`
 - `AND`
 - `OR`
 - `IN`
 
----
+### Example Analysis
 
-## ✅ Day 3 – Power BI Dashboard
+```sql
+SELECT
+    Category,
+    ROUND(SUM(Sales), 2) AS Total_Sales
+FROM sales
+GROUP BY Category
+ORDER BY Total_Sales DESC;
 
-### Completed
+# 📊 Power BI Dashboard
 
-- Installed and configured Power BI Desktop
-- Loaded the cleaned Superstore dataset into Power BI
-- Created DAX measures for business KPIs
-- Created KPI cards for:
-  - Total Sales
-  - Total Profit
-  - Total Orders
-  - Average Sales
-  - Profit Margin %
-- Created **Sales Trend Over Time** visualization
-- Created **Sales by Category** visualization
-- Created **Profit by Region** visualization
-- Created **Sales by Customer Segment** visualization
-- Started **Top Customers by Sales** analysis
-- Practiced dashboard layout and visual formatting
+The final dashboard provides an interactive overview of business performance.
 
-### Power BI Concepts Learned
+## KPI Cards
 
-- Importing data into Power BI
-- DAX measures
-- KPI cards
-- Line charts
-- Column charts
-- Bar charts
-- Donut charts
-- Top N filtering
-- Basic dashboard design
-- Visual formatting
+| KPI | Result |
+|---|---:|
+| Total Orders | **10K** |
+| Total Profit | **286.40K** |
+| Average Sales | **229.86** |
+| Total Sales | **$2.30M** |
+| Profit Margin | **12.47%** |
 
----
+## Dashboard Visualizations
 
-# 📌 Business Questions
+### 📈 Trend Analysis
 
-The project explores questions such as:
+- Orders Trend by Year
 
-- How many total orders were placed?
-- What is the total sales revenue?
-- What is the total profit?
-- How are sales changing over time?
-- Which category generates the highest sales?
-- Which region generates the highest profit?
-- Which customer segment generates the most sales?
-- Who are the top customers by sales?
-- Which products generate the highest revenue?
-- Which orders resulted in losses?
-- Which shipping mode is most frequently used?
-
----
-
-# 📊 Business KPIs
-
-The dashboard currently includes:
-
-| KPI | Description |
-|---|---|
-| Total Sales | Total revenue generated |
-| Total Profit | Total profit generated |
-| Total Orders | Number of orders/records |
-| Average Sales | Average sales value |
-| Profit Margin % | Profit as a percentage of sales |
-
-Additional analysis includes:
+### 🏷️ Category Analysis
 
 - Sales by Category
-- Profit by Region
-- Sales by Customer Segment
-- Sales Trend Over Time
-- Top Customers by Sales
+- Profit by Category
 
----
+### 👥 Customer Analysis
 
-# 📈 Dashboard Visualizations
+- Top 10 Customers by Sales
 
-The Power BI dashboard currently contains:
+### 🌎 Regional Analysis
 
-### KPI Cards
+- Total Profit by Region
 
-- Total Sales
-- Total Profit
-- Total Orders
-- Average Sales
-- Profit Margin %
+### 👤 Segment Analysis
 
-### Charts
+- Total Sales by Segment
 
-- Sales Trend Over Time
-- Sales by Category
-- Profit by Region
-- Sales by Customer Segment
-- Top Customers by Sales
+### 🎛️ Interactive Filters
 
-### Upcoming Interactive Features
+- Year
+- Region
+- Category
 
-- Year slicer
-- Region slicer
-- Category slicer
-- Interactive filtering
-
----
-
-# 💼 Skills Demonstrated
-
-### Data Analysis
-
-- Data Cleaning
-- Exploratory Data Analysis
-- Feature Engineering
-- Business KPI Analysis
-- Data Visualization
-- Data Storytelling
-
-### Python
-
-- Pandas
-- NumPy
-- Matplotlib
-- SQLite integration
-
-### SQL
-
-- Data aggregation
-- Filtering
-- Grouping
-- Sorting
-- Business analysis queries
-
-### Power BI
-
-- DAX Measures
-- KPI Cards
-- Interactive Visualizations
-- Dashboard Design
-- Top N Analysis
-
-### Other Tools
-
-- Git
-- GitHub
-- Jupyter Notebook
-- SQLite
-
----
-
-# 🔜 Upcoming Work
-
-## Day 4 – Finalization
-
-- Complete Top 10 Customers visualization
-- Add interactive slicers
-- Improve dashboard layout
-- Apply final formatting
-- Validate dashboard calculations
-- Generate final business insights
-- Add dashboard screenshots
-- Improve README documentation
-- Clean and organize GitHub repository
-- Prepare the project for portfolio/interview presentation
+The dashboard allows users to dynamically filter the visualizations and investigate different portions of the dataset.
 
 ---
 
 # 📷 Dashboard Preview
 
-### Current Dashboard – Day 3
+![Sales Performance Dashboard](screenshots/dashboard.png)
 
-![Sales Performance Dashboard](screenshots/day3_dashboard.png)
+# 💡 Key Business Insights
 
-> The dashboard will be further refined with interactive slicers, improved formatting, and additional analysis on Day 4.
+### 1. Technology leads category sales
+
+**Technology generates the highest sales**, followed by Office Supplies and Furniture.
+
+This indicates that Technology is the strongest sales-driving category in the dataset.
+
+### 2. Technology is also the most profitable category
+
+Technology generates the highest profit, while **Furniture generates the lowest profit**.
+
+The combination of lower sales and lower profit makes Furniture an area that may require further investigation.
+
+### 3. West is the most profitable region
+
+The **West region generates the highest profit**, followed by East, South, and Central.
+
+This suggests that regional performance varies significantly and could be investigated further to understand the drivers of profitability.
+
+### 4. Consumer is the largest customer segment
+
+The **Consumer segment contributes the highest sales**, followed by Corporate and Home Office.
+
+This makes Consumer customers an important segment for retention and marketing strategies.
+
+### 5. Order volume increased over time
+
+Order volume shows an overall upward trend from **2014 to 2017**, with 2017 recording the highest order activity.
+
+This indicates growing order activity over the analyzed period.
+
+### 6. High-value customers contribute significantly to sales
+
+**Sean Miller** is the highest-sales customer shown in the Top 10 customer analysis.
+
+This demonstrates the importance of identifying and retaining high-value customers.
+
+### 7. Overall profit margin is 12.47%
+
+The business generates approximately **$12.47 in profit for every $100 in sales**.
+
+This provides a baseline for comparing profitability across categories, regions, and customer segments.
+
+# 📌 Key Takeaways
+
+| Area | Finding |
+|---|---|
+| Highest Sales Category | **Technology** |
+| Lowest Sales Category | **Furniture** |
+| Highest Profit Category | **Technology** |
+| Lowest Profit Category | **Furniture** |
+| Most Profitable Region | **West** |
+| Highest Sales Segment | **Consumer** |
+| Top Customer by Sales | **Sean Miller** |
+| Highest Order Year | **2017** |
+| Lowest Order Year | **2014** |
+| Overall Profit Margin | **12.47%** |
 
 ---
 
-# ▶️ How to Run
+# 🧠 Skills Demonstrated
 
-## 1. Clone the repository
+## Data Analytics
 
-```bash
-git clone <repository-url>
-```
+- Data Cleaning
+- Exploratory Data Analysis
+- Feature Engineering
+- KPI Development
+- Business Analysis
+- Data Storytelling
+- Insight Generation
 
-## 2. Install dependencies
+## Python
 
-```bash
-pip install -r requirements.txt
-```
+- Pandas
+- NumPy
+- Matplotlib
+- Data preprocessing
+- SQLite integration
 
-## 3. Run the data cleaning script
+## SQL
 
-```bash
-python scripts/01_data_cleaning.py
-```
+- Aggregation
+- Filtering
+- Grouping
+- Sorting
+- Conditional analysis
+- Business KPI calculations
+- SQLite database querying
 
-## 4. Create the SQLite database
+## Power BI
 
-```bash
-python scripts/02_create_database.py
-```
+- Data Modeling
+- DAX Measures
+- KPI Cards
+- Line Charts
+- Bar Charts
+- Column Charts
+- Donut Charts
+- Top N Analysis
+- Slicers
+- Interactive Filtering
+- Dashboard Layout
+- Visual Formatting
 
-## 5. Run SQL analysis
+## Tools
 
-```bash
-python scripts/03_sql_analysis.py
-```
+- Git
+- GitHub
+- Jupyter Notebook
+- SQLite
+- Power BI Desktop
 
-## 6. Open the Power BI dashboard
+# 📁 Project Deliverables
 
-Open:
-
-```text
-dashboard/Sales_Performance_Dashboard.pbix
-```
-
-using **Power BI Desktop**.
+- Cleaned sales dataset
+- Python data cleaning scripts
+- SQLite database
+- SQL business analysis queries
+- Power BI dashboard
+- Business insights report
+- Dashboard screenshot
+- Project documentation
 
 ---
 
-# 🗓️ Project Timeline
+# 🚀 Future Improvements
 
-| Day | Focus | Status |
-|---|---|---|
-| Day 1 | Data Cleaning & Preparation | ✅ Completed |
-| Day 2 | SQL Analysis & Business Questions | ✅ Completed |
-| Day 3 | Power BI Dashboard Development | ✅ Completed |
-| Day 4 | Dashboard Finalization & Insights | 🔜 Upcoming |
+Potential extensions to the project include:
+
+- Add monthly and quarterly sales analysis
+- Analyze profit by sub-category
+- Analyze the impact of discounts on profitability
+- Add year-over-year growth metrics
+- Add sales forecasting
+- Add drill-through pages for customer and product analysis
+- Deploy the dashboard using Power BI Service
+- Automate the data refresh pipeline
 
 ---
 
@@ -406,3 +390,8 @@ using **Power BI Desktop**.
 **Sadikshya Adhikari**
 
 Computer Engineering Student | Aspiring Data Analyst | AI & ML Enthusiast
+
+---
+
+⭐ If you found this project useful, feel free to explore the analysis, SQL queries, and Power BI dashboard.
+
