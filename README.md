@@ -86,6 +86,7 @@ sales-performance-dashboard/
 ├── requirements.txt
 └── .gitignore
 
+```md
 # 📈 Dataset
 
 **Dataset:** Superstore Sales Dataset
@@ -137,6 +138,7 @@ Power BI Dashboard
      ▼
 Business Insights
 
+```md
 # 🧹 Data Preparation
 
 Python and Pandas were used to prepare the dataset for analysis.
