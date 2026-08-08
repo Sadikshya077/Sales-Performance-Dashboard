@@ -57,6 +57,7 @@ The final output is an interactive Power BI dashboard designed to provide a quic
 
 ## 📂 Project Structure
 
+```
 sales-performance-dashboard/
 │
 ├── data/
@@ -84,6 +85,7 @@ sales-performance-dashboard/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
 
 # 📈 Dataset
 
@@ -112,6 +114,7 @@ The dataset contains **9,994 records and 21 columns** covering customer orders, 
 
 # 🔄 Analytics Workflow
 
+```
 Raw Dataset
      │
      ▼
@@ -134,6 +137,7 @@ Power BI Dashboard
      │
      ▼
 Business Insights
+```
 
 # 🧹 Data Preparation
 
@@ -179,15 +183,6 @@ More than **25 SQL queries** were written to investigate sales and profitability
 - `AND`
 - `OR`
 - `IN`
-
-### Example Analysis
-
-SELECT
-    Category,
-    ROUND(SUM(Sales), 2) AS Total_Sales
-FROM sales
-GROUP BY Category
-ORDER BY Total_Sales DESC;
 
 # 📊 Power BI Dashboard
 
