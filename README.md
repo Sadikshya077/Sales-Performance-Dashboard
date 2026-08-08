@@ -57,7 +57,6 @@ The final output is an interactive Power BI dashboard designed to provide a quic
 
 ## 📂 Project Structure
 
-```text
 sales-performance-dashboard/
 │
 ├── data/
@@ -86,7 +85,6 @@ sales-performance-dashboard/
 ├── requirements.txt
 └── .gitignore
 
-```md
 # 📈 Dataset
 
 **Dataset:** Superstore Sales Dataset
@@ -114,7 +112,6 @@ The dataset contains **9,994 records and 21 columns** covering customer orders, 
 
 # 🔄 Analytics Workflow
 
-```text
 Raw Dataset
      │
      ▼
@@ -138,7 +135,6 @@ Power BI Dashboard
      ▼
 Business Insights
 
-```md
 # 🧹 Data Preparation
 
 Python and Pandas were used to prepare the dataset for analysis.
@@ -186,7 +182,6 @@ More than **25 SQL queries** were written to investigate sales and profitability
 
 ### Example Analysis
 
-```sql
 SELECT
     Category,
     ROUND(SUM(Sales), 2) AS Total_Sales
