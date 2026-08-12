@@ -1,4 +1,4 @@
-# 📊 Sales Performance 
+# 📊 Sales Performance Dashboard
 
 An end-to-end **Data Analytics project** analyzing 9,994 Superstore sales records to identify trends in sales, profitability, customer performance, regional performance, and product categories.
 
